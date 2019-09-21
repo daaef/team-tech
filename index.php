@@ -1,3 +1,6 @@
+<?php
+ session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,16 +59,16 @@
             <a href="#" class="sign-btn facebook btn"><span uk-icon="facebook"></span>Login with Facebook</a>
             <a href="#" class="sign-btn google btn"><span uk-icon="google"></span>Login with Google</a>
             <p class="uk-margin-top uk-margin-bottom">-or-</p>
-            <form action="">
+            <form action="include/login.php" method="POST">
                 <div class="form-input">
-                    <input id="suname" type="text" class="input" autocomplete="off" >
+                    <input id="suname" type="text" class="input" autocomplete="off" name="username">
                     <label class="suname" for="suname">Username or Email</label>
                 </div>
                 <div class="form-input">
-                    <input id="spword" type="password" class="input" autocomplete="off" >
+                    <input id="spword" type="password" class="input" autocomplete="off" name="password" >
                     <label class="spword" for="spword">Password</label>
                 </div>
-                <button type="submit" class="btn">Login</button>
+                <button type="submit" class="btn" name="submit">Login</button>
             </form>
         </div>
         <p class="signin-link toggleMe">Already have an account? <a href="#"
