@@ -8,6 +8,8 @@
     <title>Team Tech</title>
     <link rel="stylesheet" href="css/uikit.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <!--Script files-->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 <body>
 
@@ -25,6 +27,7 @@
             <p class="text">Create an account</p>
             <a href="#" class="sign-btn facebook btn"><span uk-icon="facebook"></span>Sign-up with Facebook</a>
             <a href="#" class="sign-btn google btn"><span uk-icon="google"></span>Sign-up with Google</a>
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
             <p class="uk-margin-top uk-margin-bottom">-or-</p>
             <form action="">
                 <div class="form-input">
@@ -76,6 +79,7 @@
             Register</a></p>
     </div>
 </main>
+<!--Script Files-->
 <script src="js/uikit.min.js"></script>
 <script src="js/uikit-icons.min.js"></script>
 <script src="js/script.js"></script>
