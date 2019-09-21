@@ -7,8 +7,6 @@ $username = mysqli_real_escape_string($connect, $_POST['txtUser']);
 $pass1 = mysqli_real_escape_string($connect, $_POST['txtPass']);
 $pass2 = mysqli_real_escape_string($connect, $_POST['txtRePass']);
 $email = mysqli_real_escape_string($connect, $_POST['txtEmail']);
-$harshpass1 = MD5($pass1);
-$harshpass2 = MD5($pass2);
 #check if our imputs are empty
 if (empty($name)) {
     header('Location: ../index.html?=name cannot be empty');
@@ -36,6 +34,9 @@ elseif ($pass1 != $pass2) {
     exit();
 }
 else {
+
+    $harshpass1 = password_hash($pass1, PASSWORD_DEFAULT);
+    $harshpass2 = password_hash($pass2, PASSWORD_DEFAULT);
     # code...
   $sql = "INSERT INTO register(fullname, useremail, username, pass, confirmpass) VALUES('$name', '$email', '$username','$harshpass1', '$harshpass2')";
     mysqli_query($connect, $sql);

@@ -1,3 +1,9 @@
+<?php
+session_start();
+include 'include/connect.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +18,12 @@
 <body>
 
 <main class="main-container uk-flex uk-flex-wrap">
-    <h1>WELCOME</h1>
+    <?php
+    if (isset($_SESSION['userId'])) {
+        echo ' <h1>WELCOME ' . $_SESSION['userName'] . '</h1>';
+    }
+    ?>
+    
   
     </div>
 </main>
