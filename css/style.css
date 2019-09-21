@@ -92,8 +92,7 @@ button.btn{
 }*/
 .signin-link{
     color: #000;
-    position: absolute;
-    bottom: 10px;
+    margin-top: 40px;
 }
 
 .signin-link a{
